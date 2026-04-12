@@ -2,7 +2,7 @@ asgiref
 Django
 django-cors-headers
 djangorestframework
-djangorestframeowrk-simplejwt
+djangorestframework-simplejwt
 PyJWT
 pytz
 sqlparse
