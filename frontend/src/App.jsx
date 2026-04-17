@@ -24,25 +24,26 @@ function RegisterAndLogout(){
   return <Register />
 }
 function App() {
-
   return (
-   <BrowserRouter>
-   <Routes>
-    <Route
-      path="/"
-      element={
-        <ProtectedRoute>{/*you cannot access home unless you have the access token and it is valid. This is only for people that are loggedin*/}
-          <Home />
-        </ProtectedRoute>
-      }
-    />
-    <Route path="/login" element={<Login/>}/>
-    <Route path="/logout" elemtent={<Logout/>}/>
-    <Route path="/register" element={<RegisterAndLogout/>}/>
-    <Route path="*" element={<NotFound/>}/>
-   </Routes>
-   </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>{/* this is the home page, you can change it to whatever you want, just make sure to wrap it with ProtectedRoute component to protect it from unauthorized access, you cannot access this unless you have been authenticated */}
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/register" element={<RegisterAndLogout />} />
+        <Route path="*" element={<NotFound />}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
 export default App
+
+
